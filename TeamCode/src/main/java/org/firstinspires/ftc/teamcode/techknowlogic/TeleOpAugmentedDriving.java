@@ -9,6 +9,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
 import org.firstinspires.ftc.teamcode.drive.SampleMecanumDriveCancelable;
+import org.firstinspires.ftc.teamcode.trajectorysequence.TrajectorySequence;
 
 /**
  * This opmode demonstrates how one can augment driver control by following Road Runner arbitrary
@@ -117,8 +118,10 @@ public class TeleOpAugmentedDriving extends LinearOpMode {
                         // trajectory on the fly and follow it
                         // We switch the state to AUTOMATIC_CONTROL
 
-                        Trajectory traj1 = drive.trajectoryBuilder(poseEstimate)
-                                .strafeLeft(42)
+                        drive.turn(Math.toRadians(-100));
+
+                        Trajectory traj1 = drive.trajectoryBuilder(drive.getPoseEstimate())
+                                .forward(40)
                                 .build();
 
                         drive.followTrajectoryAsync(traj1);

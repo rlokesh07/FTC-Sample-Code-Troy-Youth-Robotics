@@ -108,6 +108,8 @@ public class PushbotAutoDriveByGyro_Linear extends LinearOpMode {
         robot.leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         robot.rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
+        robot.rightDrive.setMode(DcMotor.RunMode.RUN_TO_POSITION);
+
         // Send telemetry message to alert driver that we are calibrating;
         telemetry.addData(">", "Calibrating Gyro");    //
         telemetry.update();

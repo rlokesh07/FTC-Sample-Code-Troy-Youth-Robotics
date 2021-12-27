@@ -364,6 +364,9 @@ public class DriverOperator extends OpMode {
             if (isCargoinCarriage == false) {
                 freightInCarousalTime = System.currentTimeMillis();
                 isCargoinCarriage = true;
+
+                gamepad1.rumble(500);
+
             }
             cargoLoadedflagArm.setPosition(FLAG_RAISE_POSITION);
             //isCargoinCarrige is set to false when the carriage is delivered or lost during transit

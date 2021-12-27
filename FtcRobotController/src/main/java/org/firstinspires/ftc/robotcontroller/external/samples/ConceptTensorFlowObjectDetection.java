@@ -69,7 +69,9 @@ public class ConceptTensorFlowObjectDetection extends LinearOpMode {
       "Cube",
       "Duck",
       "Marker"
+
     };
+
 
     /*
      * IMPORTANT: You need to obtain your own license key to use Vuforia. The string below with which
